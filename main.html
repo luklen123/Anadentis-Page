@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strona Crystal - Zielony Akcent</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
+
+  body {
+    background: #e0e0e0; 
+    min-height:100vh;
+    color:#333;
+  }
+
+  /* Header - ciemny */
+  header {
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:3rem;
+    padding: 1rem 2rem;
+    background: rgba(44,44,44,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+
+  .logo img { height:50px; width:auto; }
+
+  nav { display:flex; justify-content:center; }
+
+  nav ul {
+    list-style:none;
+    display:flex;
+    gap:2rem;
+  }
+
+  nav a {
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition: 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+  }
+
+  nav a:hover {
+    background: rgba(159,191,59,0.3);
+    color: #9FBF3B;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    position:absolute;
+    right:1rem;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:1100;
+  }
+
+  .hamburger div {
+    width:25px;
+    height:3px;
+    background:white;
+    border-radius:2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Mobile menu */
+  @media (max-width: 1226px) {
+    nav ul {
+      flex-direction: column;
+      position: fixed;
+      top: 87px;
+      right: -220px;
+      width:220px;
+      background: rgba(44,44,44,0.95);
+      backdrop-filter: blur(10px);
+      padding:1rem;
+      gap:1rem;
+      border-radius: 0 0 0 12px;
+      transition:right 0.3s ease;
+    }
+
+    nav ul.active { right:0; }
+
+    .hamburger { display:flex; }
+  }
+
+  /* Ważna informacja pod header */
+  .alert-bar {
+    display:none; /* domyślnie ukryty */
+    position: fixed;
+    top: 87px; /* zaraz pod headerem */
+    left: 0;
+    width: 100%;
+    background: #9FBF3B; /* pomarańczowo-zielony akcent */
+    color: #fff;
+    text-align: center;
+    padding: 0.7rem;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    z-index: 999;
+  }
+
+  /* Sections */
+  section {
+    margin-top:100px; 
+    padding:80px 20px;
+    max-width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+    background: #fff; 
+    border-radius:20px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.1);
+    margin-bottom:50px;
+    color:#333;
+  }
+
+  section h2 {
+    font-size:2rem;
+    margin-bottom:20px;
+    color:#9FBF3B;
+  }
+
+  section p {
+    font-size:1rem;
+    line-height:1.6;
+    color:#555;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+  </div>
+  <nav>
+    <ul id="menu">
+      <li><a href="main.html">Strona główna</a></li>
+      <li><a href="location.html">Dojazd</a></li>
+      <li><a href="services.html">Usługi</a></li>
+      <li><a href="prices.html">Cennik</a></li>
+      <li><a href="team.html">Zespół</a></li>
+      <li><a href="equipment.html">Wyposażenie</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+</header>
+
+<!-- Pasek alertu -->
+<div class="alert-bar" id="alertBar">
+  TEST
+</div>
+
+
+<section id="hours" style="padding:20px; background:#f4f4f4;">
+  <div style="max-width:1100px; margin:0 auto;">
+
+    <div style="
+      display:flex;
+      flex-wrap:wrap;
+      background: rgba(255,255,255,0.65);
+      backdrop-filter: blur(14px);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 8px 35px rgba(0,0,0,0.12);
+      border:1px solid rgba(0,0,0,0.06);
+      padding:40px;
+      flex-direction:column;
+      gap:30px;
+    ">
+
+      <!-- NOWY KAFEL NA CAŁĄ SZEROKOŚĆ -->
+      <div style="
+        background:#fff;
+        border-left:5px solid #9FBF3B;
+        padding:20px;
+        border-radius:14px;
+        box-shadow:0 4px 20px rgba(0,0,0,0.08);
+        text-align:center;
+        width:100%;
+      ">
+        <h3 style="margin-bottom:8px; color:#9FBF3B; font-size:1.3rem;">Kontakt</h3>
+        <p style="font-size:1rem; line-height:1.6; color:#666;">
+          <strong>Adres:</strong> ul. Cynamonowa 14A, 51-180 Wrocław<br>
+          <strong>Telefon:</strong> <a href="tel:+48509503765" style="color:#9FBF3B; text-decoration:none;">+48 509 503 765</a><br>
+          <strong>Mail:</strong> <a href="mailto:anadentis@o2.pl" style="color:#9FBF3B; text-decoration:none;">anadentis@o2.pl</a>
+        </p>
+      </div>
+
+      <!-- GODZINY OTWARCIA -->
+      <div style="flex:1 1 420px;">
+        <h2 style="
+          font-size:2.3rem;
+          margin:0 0 20px;
+          color:#9FBF3B;
+          text-align:center;
+          font-weight:700;
+          letter-spacing:1px;
+        ">
+          Godziny otwarcia
+        </h2>
+
+        <ul style="
+          list-style:none;
+          padding:0;
+          margin:0 auto 20px auto;
+          font-size:1.25rem;
+          line-height:2;
+          color:#333;
+          font-weight:600;
+          max-width:320px;
+          text-align:center;
+        ">
+          <li><strong>Poniedziałek:</strong> 13:00 – 20:00</li>
+          <li><strong>Wtorek:</strong> 8:30 – 15:30</li>
+          <li><strong>Środa:</strong> 13:00 – 20:00</li>
+          <li><strong>Czwartek:</strong> 8:30 – 15:30</li>
+          <li><strong>Piątek:</strong> 13:00 – 20:00</li>
+          <li style="opacity:0.7;"><strong>Sobota:</strong> nieczynne</li>
+          <li style="opacity:0.7;"><strong>Niedziela:</strong> nieczynne</li>
+        </ul>
+
+        <!-- KARUZELA ZDJĘĆ -->
+        <div class="gallery-card" style="max-width:100%; margin:0 auto;">
+          <div class="slider" id="slider" style="position:relative; height:450px; overflow:hidden; border-radius:12px;">
+            <img class="slide active" src="gabinet.jpg" alt="Gabinet 1" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:1; transition:opacity .6s ease;">
+            <img class="slide" src="gabinet1.jpg" alt="Gabinet 2" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease;">
+            <img class="slide" src="gabinet2.jpg" alt="Gabinet 3" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease;">
+            <button class="slide-btn prev" aria-label="Poprzednie" style="position:absolute; left:8px; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center;">‹</button>
+            <button class="slide-btn next" aria-label="Następne" style="position:absolute; right:8px; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center;">›</button>
+          </div>
+          <div class="dots" style="display:flex; gap:8px; justify-content:center; margin-top:12px;">
+            <button class="dot active" data-index="0" aria-label="Slide 1" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:1; cursor:pointer;"></button>
+            <button class="dot" data-index="1" aria-label="Slide 2" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer;"></button>
+            <button class="dot" data-index="2" aria-label="Slide 3" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer;"></button>
+          </div>
+        </div>
+
+        <!-- DODATKOWE INFORMACJE -->
+        <div style="
+          background:#fff;
+          border-left:5px solid #9FBF3B;
+          padding:20px;
+          border-radius:14px;
+          box-shadow:0 4px 20px rgba(0,0,0,0.08);
+          margin-top: 20px;
+          width:100%;
+        ">
+          <h3 style="margin-bottom:8px; color:#9FBF3B; font-size:1.3rem;">Informacje dodatkowe</h3>
+          <p style="font-size:1rem; line-height:1.6; color:#666; text-align:center;">
+            • Wizyty realizujemy tylko po wcześniejszym umówieniu.<br>
+            • Rejestracja telefoniczna w godzinach pracy.<br>
+            • W nagłych przypadkach znajdziemy najszybszy możliwy termin.<br>
+            • Płatność kartą, BLIK lub gotówką.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<footer style="
+  margin-top:60px;
+  padding:25px 10px;
+  text-align:center;
+  font-size:0.95rem;
+  color:#333;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(10px);
+  border-top:1px solid rgba(0,0,0,0.08);
+">
+  <span style="color:#9FBF3B; font-weight:600;">2019–2025 © ANADENTIS</span>  
+  — Wszelkie prawa zastrzeżone.
+</footer>
+
+
+
+
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+const alertBar = document.getElementById('alertBar');
+
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  hamburger.classList.toggle('open');
+});
+
+// Funkcja do pokazania alertu (np. gabinet zamknięty)
+function showAlert(message) {
+  alertBar.textContent = message;
+  alertBar.style.display = 'block';
+}
+
+// Przykład: wywołanie alertu po załadowaniu strony
+// Możesz podmienić warunek na np. sprawdzenie godzin otwarcia
+window.addEventListener('load', () => {
+  const isClosed = fasle; // ustaw na true jeśli gabinet zamknięty
+  if(isClosed){
+    showAlert("Gabinet zamknięty w dniach 01.12.2025 - 23.11.2026. Za utrudnienia przepraszamy.");
+  }
+});
+</script>
+<script>
+(function(){
+  const slides = Array.from(document.querySelectorAll('#slider .slide'));
+  const dots = Array.from(document.querySelectorAll('.dot'));
+  const prevBtn = document.querySelector('.slide-btn.prev');
+  const nextBtn = document.querySelector('.slide-btn.next');
+  let current = 0;
+  let interval = null;
+  const AUTOPLAY_DELAY = 4000;
+
+  function goTo(index){
+    slides.forEach((s,i)=>{
+      s.classList.toggle('active', i===index);
+      s.style.opacity = (i===index) ? '1' : '0';
+    });
+    dots.forEach((d,i)=>{
+      d.classList.toggle('active', i===index);
+      d.style.opacity = (i===index) ? '1' : '0.4';
+    });
+    current = index;
+  }
+
+  function next(){
+    goTo((current+1) % slides.length);
+  }
+  function prev(){
+    goTo((current-1 + slides.length) % slides.length);
+  }
+
+  function startAutoplay(){
+    interval = setInterval(next, AUTOPLAY_DELAY);
+  }
+  function stopAutoplay(){
+    if(interval){ clearInterval(interval); interval = null; }
+  }
+
+  // init
+  goTo(0);
+  startAutoplay();
+
+  // controls
+  nextBtn.addEventListener('click', ()=>{
+    next();
+    stopAutoplay();
+    startAutoplay();
+  });
+  prevBtn.addEventListener('click', ()=>{
+    prev();
+    stopAutoplay();
+    startAutoplay();
+  });
+
+  dots.forEach(dot=>{
+    dot.addEventListener('click', (e)=>{
+      const idx = Number(e.currentTarget.dataset.index);
+      goTo(idx);
+      stopAutoplay();
+      startAutoplay();
+    });
+  });
+
+  // pause on hover / focus
+  const sliderEl = document.getElementById('slider');
+  sliderEl.addEventListener('mouseenter', stopAutoplay);
+  sliderEl.addEventListener('mouseleave', startAutoplay);
+  sliderEl.addEventListener('touchstart', stopAutoplay, {passive:true});
+  sliderEl.addEventListener('touchend', startAutoplay, {passive:true});
+
+  // simple swipe support
+  let touchStartX = 0;
+  sliderEl.addEventListener('touchstart', e=>{
+    touchStartX = e.changedTouches[0].clientX;
+  }, {passive:true});
+  sliderEl.addEventListener('touchend', e=>{
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if(Math.abs(dx) > 30){
+      if(dx < 0) next(); else prev();
+    }
+  }, {passive:true});
+
+  // keyboard navigation
+  sliderEl.tabIndex = 0;
+  sliderEl.addEventListener('keydown', e=>{
+    if(e.key === 'ArrowLeft') { prev(); stopAutoplay(); startAutoplay(); }
+    if(e.key === 'ArrowRight') { next(); stopAutoplay(); startAutoplay(); }
+  });
+})();
+</script>
+
+</body>
+</html>
