@@ -186,91 +186,129 @@
       gap:30px;
     ">
 
-      <!-- NOWY KAFEL NA CAŁĄ SZEROKOŚĆ -->
-      <div style="
-        background:#fff;
-        border-left:5px solid #9FBF3B;
-        padding:20px;
-        border-radius:14px;
-        box-shadow:0 4px 20px rgba(0,0,0,0.08);
-        text-align:center;
-        width:100%;
-      ">
-        <h3 style="margin-bottom:8px; color:#9FBF3B; font-size:1.3rem;">Kontakt</h3>
-        <p style="font-size:1rem; line-height:1.6; color:#666;">
-          <strong>Adres:</strong> ul. Cynamonowa 14A, 51-180 Wrocław<br>
-          <strong>Telefon:</strong> <a href="tel:+48509503765" style="color:#9FBF3B; text-decoration:none;">+48 509 503 765</a><br>
-          <strong>Mail:</strong> <a href="mailto:anadentis@o2.pl" style="color:#9FBF3B; text-decoration:none;">anadentis@o2.pl</a>
-        </p>
-      </div>
+<div class="content">
 
-      <!-- GODZINY OTWARCIA -->
-      <div style="flex:1 1 420px;">
-        <h2 style="
-          font-size:2.3rem;
-          margin:0 0 20px;
-          color:#9FBF3B;
-          text-align:center;
-          font-weight:700;
-          letter-spacing:1px;
-        ">
-          Godziny otwarcia
-        </h2>
+  <div class="card">
+    <h2>Cennik usług stomatologicznych</h2>
 
-        <ul style="
-          list-style:none;
-          padding:0;
-          margin:0 auto 20px auto;
-          font-size:1.25rem;
-          line-height:2;
-          color:#333;
-          font-weight:600;
-          max-width:320px;
-          text-align:center;
-        ">
-          <li><strong>Poniedziałek:</strong> 13:00 – 20:00</li>
-          <li><strong>Wtorek:</strong> 8:30 – 15:30</li>
-          <li><strong>Środa:</strong> 13:00 – 20:00</li>
-          <li><strong>Czwartek:</strong> 8:30 – 15:30</li>
-          <li><strong>Piątek:</strong> 13:00 – 20:00</li>
-          <li style="opacity:0.7;"><strong>Sobota:</strong> nieczynne</li>
-          <li style="opacity:0.7;"><strong>Niedziela:</strong> nieczynne</li>
-        </ul>
+    <!-- STOMATOLOGIA ZACHOWAWCZA -->
+    <h3>Stomatologia zachowawcza</h3>
+    <table class="price-table">
+      <tr><td>Konsultacja, porada</td><td>80-150 zł</td></tr>
+      <tr><td>Wypełnienie światłoutwardzalne</td><td>300-400 zł</td></tr>
+      <tr><td>Znieczulenie</td><td>40 zł</td></tr>
+      <tr><td>Zdjęcie RTG (radiowizjografia)</td><td>35 zł</td></tr>
+      <tr><td>Odbudowa zęba z kształtki</td><td>450 zł</td></tr>
+      <tr><td>Wkład z włókna szklanego + odbudowa zrębu zęba</td><td>500 zł</td></tr>
+      <tr><td>Opatrunek tlenek cynku</td><td>180 zł</td></tr>
+      <tr><td>Scaling (usuwanie kamienia) + polerowanie - 1 łuk</td><td>100 zł</td></tr>
+      <tr><td>Scaling (usuwanie kamienia) + polerowanie - 2 łuki</td><td>200 zł</td></tr>
+      <tr><td>Piaskowanie zębów</td><td>200 zł</td></tr>
+    </table>
 
-        <!-- KARUZELA ZDJĘĆ -->
-        <div class="gallery-card" style="max-width:100%; margin:0 auto;">
-          <div class="slider" id="slider" style="position:relative; height:450px; overflow:hidden; border-radius:12px;">
-            <img class="slide active" src="gabinet.jpg" alt="Gabinet 1" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:1; transition:opacity .6s ease;">
-            <img class="slide" src="gabinet1.jpg" alt="Gabinet 2" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease;">
-            <img class="slide" src="gabinet2.jpg" alt="Gabinet 3" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease;">
-            <button class="slide-btn prev" aria-label="Poprzednie" style="position:absolute; left:8px; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center;">‹</button>
-            <button class="slide-btn next" aria-label="Następne" style="position:absolute; right:8px; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center;">›</button>
-          </div>
-          <div class="dots" style="display:flex; gap:8px; justify-content:center; margin-top:12px;">
-            <button class="dot active" data-index="0" aria-label="Slide 1" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:1; cursor:pointer;"></button>
-            <button class="dot" data-index="1" aria-label="Slide 2" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer;"></button>
-            <button class="dot" data-index="2" aria-label="Slide 3" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer;"></button>
-          </div>
-        </div>
+    <!-- STOMATOLOGIA DZIECIĘCA -->
+    <h3>Stomatologia dziecięca</h3>
+    <table class="price-table">
+      <tr><td>Przegląd</td><td>60 zł</td></tr>
+      <tr><td>Kolejna wizyta adaptacyjna</td><td>80 zł</td></tr>
+      <tr><td>Wypełnienie światłoutwardzalne (kolorowe)</td><td>200 zł</td></tr>
+      <tr><td>Wypełnienie tymczasowe</td><td>180 zł</td></tr>
+      <tr><td>Znieczulenie</td><td>40 zł</td></tr>
+      <tr><td>Lakowanie zębów mlecznych (1 ząb)</td><td>100 zł</td></tr>
+      <tr><td>Lakowanie zębów stałych (1 ząb)</td><td>130 zł</td></tr>
+      <tr><td>Amputacja formokrezolowa (jednowizytowa)</td><td>300 zł</td></tr>
+      <tr><td>"Zatrucie" zęba mlecznego (dwuwizytowa)</td><td>100 zł</td></tr>
+      <tr><td>Ekstrakcja zęba mlecznego</td><td>100-150 zł</td></tr>
+    </table>
 
-        <!-- DODATKOWE INFORMACJE -->
-        <div style="
-          background:#fff;
-          border-left:5px solid #9FBF3B;
-          padding:20px;
-          border-radius:14px;
-          box-shadow:0 4px 20px rgba(0,0,0,0.08);
-          margin-top: 20px;
-          width:100%;
-        ">
-          <h3 style="margin-bottom:8px; color:#9FBF3B; font-size:1.3rem;">Informacje dodatkowe</h3>
-          <p style="font-size:1rem; line-height:1.6; color:#666; text-align:center;">
-            • Wizyty realizujemy tylko po wcześniejszym umówieniu.<br>
-            • Rejestracja telefoniczna w godzinach pracy.<br>
-            • W nagłych przypadkach znajdziemy najszybszy możliwy termin.<br>
-            • Płatność kartą, BLIK lub gotówką.
-          </p>
-        </div>
+    <!-- CHIRURGIA STOMATOLOGICZNA -->
+    <h3>Chirurgia stomatologiczna</h3>
+    <table class="price-table">
+      <tr><td>Usunięcie zęba mlecznego</td><td>100-150 zł</td></tr>
+      <tr><td>Usunięcie zęba stałego jednokorzeniowego</td><td>250-350 zł</td></tr>
+      <tr><td>Usunięcie zęba stałego wielokorzeniowego</td><td>350-500 zł</td></tr>
+      <tr><td>Szycie zębodołu</td><td>60 zł</td></tr>
+      <tr><td>Usunięcie szwów</td><td>60 zł</td></tr>
+      <tr><td>Leczenie "suchego zębodołu"</td><td>60 zł</td></tr>
+      <tr><td>Nacięcie i drenaż ropnia</td><td>150 zł</td></tr>
+    </table>
+
+    <!-- ENDODONCJA -->
+    <h3>Endodoncja</h3>
+    <table class="price-table">
+      <tr><td>Maszynowe opracowanie kanałów (Endostary E3 AZURE) + wypełnianie metodą ciekłej gutaperki</td><td>650 zł</td></tr>
+      <tr><td>Leczenie kanałowe siekacze</td><td>1200 zł</td></tr>
+      <tr><td>Leczenie kanałowe przedtrzonowce</td><td>1500 zł</td></tr>
+      <tr><td>Leczenie kanałowe trzonowce</td><td>1800 zł</td></tr>
+      <tr><td>Leczenie kanałowe zębów ósmych</td><td>150 zł</td></tr>
+      <tr><td>Kanał dodatkowy</td><td>850 zł</td></tr>
+      <tr><td>RE-ENDO (ponowne leczenie kanałowe) siekacze</td><td>1200 zł</td></tr>
+      <tr><td>RE-ENDO przedtrzonowce</td><td>1700 zł</td></tr>
+      <tr><td>RE-ENDO trzonowce</td><td>1000 zł</td></tr>
+    </table>
+
+    <!-- PROTETYKA -->
+    <h3>Protetyka</h3>
+    <table class="price-table">
+      <tr><td>Plan leczenia protetycznego</td><td>100 zł</td></tr>
+      <tr><td>Modele diagnostyczne</td><td>100 zł</td></tr>
+      <tr><td>Korona porcelanowa na metalu</td><td>1200 zł</td></tr>
+      <tr><td>Korona porcelanowa na cyrkonie</td><td>1600 zł</td></tr>
+      <tr><td>Korona pełnoceramiczna E-MAX</td><td>1600 zł</td></tr>
+      <tr><td>Licówka porcelanowa</td><td>1900 zł</td></tr>
+      <tr><td>Licówka kompozytowa</td><td>1500 zł</td></tr>
+      <tr><td>INLAY/ONLAY- kompozytowa</td><td>1100 zł</td></tr>
+      <tr><td>Endokorona - kompozytowa</td><td>1100 zł</td></tr>
+      <tr><td>Most adhezyjny - kompozytowy</td><td>1500 zł</td></tr>
+      <tr><td>Korona lana</td><td>750 zł</td></tr>
+      <tr><td>Korona tymczasowa</td><td>180 zł</td></tr>
+      <tr><td>Proteza całkowita</td><td>1300 zł</td></tr>
+      <tr><td>Proteza częściowa</td><td>1100 zł</td></tr>
+      <tr><td>Mikroproteza</td><td>800 zł</td></tr>
+      <tr><td>Proteza szkieletowa/szyno-proteza</td><td>2300 zł</td></tr>
+      <tr><td>Naprawa protezy (+50 zł każdy dodatkowy element)</td><td>250 zł</td></tr>
+      <tr><td>Szyna relaksacyjna</td><td>400 zł</td></tr>
+      <tr><td>Podścielenie protezy</td><td>400 zł</td></tr>
+    </table>
+
+  </div>
+
+</div>
+
+<style>
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+.price-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.price-table tr:last-child td {
+  border-bottom: none;
+}
+.price-table td:first-child {
+  font-weight: 500;
+  color: #333;
+}
+.price-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: #9FBF3B;
+}
+.card h3 {
+  color:#9FBF3B;
+  margin:20px 0 12px 0;
+}
+
+tr:hover{
+  background: #eef3e0;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+</style>
+
 
       </div>
     </div>
@@ -319,7 +357,7 @@ function showAlert(message) {
 // Przykład: wywołanie alertu po załadowaniu strony
 // Możesz podmienić warunek na np. sprawdzenie godzin otwarcia
 window.addEventListener('load', () => {
-  const isClosed = fasle; // ustaw na true jeśli gabinet zamknięty
+  const isClosed = false; // ustaw na true jeśli gabinet zamknięty
   if(isClosed){
     showAlert("Gabinet zamknięty w dniach 01.12.2025 - 23.11.2026. Za utrudnienia przepraszamy.");
   }
