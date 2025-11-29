@@ -158,6 +158,19 @@ header {
     line-height:1.6;
     color:#555;
   }
+
+/* STYLE DO CONTENTU */
+  .map-container {
+    width:100%;
+    height:0;
+    padding-bottom:56.25%;
+    position: relative;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 4px 20px rgba(0,0,0,0.1);
+    margin-top:20px;
+  }
+  .map-container iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
 </style>
 </head>
 <body>
@@ -208,74 +221,38 @@ header {
       flex-direction:column;
       gap:30px;
     ">
+      <div class="card">
+        <h2>Jak do nas dojechać?</h2>
+<p>
+  Nasz gabinet stomatologiczny <strong>ANADENTIS</strong> znajduje się we Wrocławiu przy ulicy 
+  <strong>Cynamonowej 14A</strong>, w spokojnej i łatwo dostępnej części osiedla Lipa Piotrowska.
+</p>
+<br>
+<p>
+  <strong>Dojazd komunikacją miejską:</strong><br>
+  Do gabinetu można wygodnie dojechać autobusami linii <strong>108</strong>, <strong>111</strong> oraz <strong>143</strong>.  
+  Autobusy zatrzymują się na przystanku <em>Cynamonowa</em>, który znajduje się tuż obok budynku, 
+  dzięki czemu droga z przystanku do wejścia zajmuje dosłownie kilkanaście sekund.<br>
+  Dodatkowo niedaleko przebiega trasa autobusu <strong>105</strong> — wysiadając na przystanku 
+  <em>Lipa Piotrowska</em> należy przejść pieszo około 600 metrów.
+</p>
+<br>
+<p>
+  <strong>Dojazd samochodem:</strong><br>
+  Dla pacjentów zmotoryzowanych przygotowaliśmy <strong>dwa dedykowane miejsca parkingowe</strong> znajdujące się 
+  po lewej stronie wjazdu. Miejsca są oznaczone tabliczką informacyjną.  
+  Klucz do blokad parkingowych jest dostępny w gabinecie — w razie potrzeby prosimy o kontakt przy wejściu.
+</p>
 
-
-      <!-- GODZINY OTWARCIA -->
-      <div style="flex:1 1 420px;">
-        <h2 style="
-          font-size:2.3rem;
-          margin:0 0 20px;
-          color:#9FBF3B;
-          text-align:center;
-          font-weight:700;
-          letter-spacing:1px;
-        ">
-          Godziny otwarcia
-        </h2>
-
-        <ul style="
-          list-style:none;
-          padding:0;
-          margin:0 auto 20px auto;
-          font-size:1.25rem;
-          line-height:2;
-          color:#333;
-          font-weight:600;
-          max-width:320px;
-          text-align:center;
-        ">
-          <li><strong>Poniedziałek:</strong> 13:00 – 20:00</li>
-          <li><strong>Wtorek:</strong> 8:30 – 15:30</li>
-          <li><strong>Środa:</strong> 13:00 – 20:00</li>
-          <li><strong>Czwartek:</strong> 8:30 – 15:30</li>
-          <li><strong>Piątek:</strong> 13:00 – 20:00</li>
-          <li style="opacity:0.7;"><strong>Sobota:</strong> nieczynne</li>
-          <li style="opacity:0.7;"><strong>Niedziela:</strong> nieczynne</li>
-        </ul>
-
-        <!-- KARUZELA ZDJĘĆ -->
-        <div class="gallery-card" style="max-width:100%; margin:0 auto;">
-          <div class="slider" id="slider" style="position:relative; height:450px; overflow:hidden; border-radius:12px;">
-            <img class="slide active" src="gabinet.jpg" alt="Gabinet 1" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:1; transition:opacity .6s ease;">
-            <img class="slide" src="gabinet1.jpg" alt="Gabinet 2" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease;">
-            <img class="slide" src="gabinet2.jpg" alt="Gabinet 3" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease;">
-            <button class="slide-btn prev" aria-label="Poprzednie" style="position:absolute; left:8px; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center;">‹</button>
-            <button class="slide-btn next" aria-label="Następne" style="position:absolute; right:8px; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center;">›</button>
-          </div>
-          <div class="dots" style="display:flex; gap:8px; justify-content:center; margin-top:12px;">
-            <button class="dot active" data-index="0" aria-label="Slide 1" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:1; cursor:pointer;"></button>
-            <button class="dot" data-index="1" aria-label="Slide 2" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer;"></button>
-            <button class="dot" data-index="2" aria-label="Slide 3" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer;"></button>
-          </div>
+<p>
+  Lokalizacja naszego gabinetu pozwala na szybki i wygodny dojazd zarówno komunikacją miejską, jak i samochodem.  
+  Serdecznie zapraszamy!
+</p>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.360321516127!2d16.99622741572476!3d51.17558147958203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470feb644ea03005%3A0xd2f5756a4db18219!2sAnadentis%20Gabinet%20Stomatologiczny!5e0!3m2!1spl!2spl!4v1586623630366!5m2!1spl!2spl" allowfullscreen="" loading="lazy" title="Mapa dojazdu"></iframe>
         </div>
+      </div>
 
-        <!-- DODATKOWE INFORMACJE -->
-        <div style="
-          background: #eef3e0;
-          border-left:5px solid #9FBF3B;
-          padding:20px;
-          border-radius:14px;
-          box-shadow:0 4px 20px rgba(0,0,0,0.08);
-          margin-top: 20px;
-          width:100%;
-        ">
-          <h3 style="margin-bottom:8px; color:#9FBF3B; font-size:1.3rem;">Informacje dodatkowe</h3>
-          <p style="font-size:1rem; line-height:1.6; color:#666; text-align:center;">
-            • Rejestracja telefoniczna w godzinach pracy.<br>
-            • W nagłych przypadkach znajdziemy najszybszy możliwy termin.<br>
-            • Płatność kartą, BLIK lub gotówką.
-          </p>
-        </div>
 
       </div>
     </div>

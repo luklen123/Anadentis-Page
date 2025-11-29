@@ -209,73 +209,120 @@ header {
       gap:30px;
     ">
 
+  <!-- Opis wyśrodkowany -->
+  <div class="description-card">
+    <h2>Wyposażenie</h2>
+    <ul class="equipment-list">
+      <li>Rentgen GENDEX, STERN WEBER</li>
+      <li>Radiowizjografia komputerowa - RTG (najniższa dawka napromieniowania)</li>
+      <li>Ozon</li>
+      <li>Dwa Unity stomatologiczne STERN WEBER</li>
+      <li>Kamera wewnątrzustna GENDEX</li>
+      <li>Skaler NO-PAIN</li>
+      <li>Autoklaw TINGET</li>
+      <li>Piaskarka AIR.FLOW HANDY 3.0</li>
+      <li>Myjka ultradźwiękowa</li>
+      <li>Wstrząsarka do mieszania materiałów stomatologicznych</li>
+      <li>Mieszalnik do mas protetycznych SYMPRESS</li>
+      <li>Asistina</li>
+    </ul>
+  </div>
 
-      <!-- GODZINY OTWARCIA -->
-      <div style="flex:1 1 420px;">
-        <h2 style="
-          font-size:2.3rem;
-          margin:0 0 20px;
-          color:#9FBF3B;
-          text-align:center;
-          font-weight:700;
-          letter-spacing:1px;
-        ">
-          Godziny otwarcia
-        </h2>
+  <!-- Karuzela zdjęć -->
+  <div class="carousel-card">
+    <div class="slider" id="slider" style="position:relative; height:400px; overflow:hidden; border-radius:16px;">
+      <img class="slide active" src="gabinet1.jpg" alt="Gabinet 1">
+      <img class="slide" src="gabinet2.jpg" alt="Gabinet 2">
+      <img class="slide" src="gabinet3.jpg" alt="Gabinet 3">
+      <button class="slide-btn prev" aria-label="Poprzednie">‹</button>
+      <button class="slide-btn next" aria-label="Następne">›</button>
+    </div>
+    <div class="dots">
+      <button class="dot active" data-index="0"></button>
+      <button class="dot" data-index="1"></button>
+      <button class="dot" data-index="2"></button>
+    </div>
+  </div>
+<style>
+.content { padding:120px 20px 60px; max-width:900px; margin:0 auto; text-align:center; }
 
-        <ul style="
-          list-style:none;
-          padding:0;
-          margin:0 auto 20px auto;
-          font-size:1.25rem;
-          line-height:2;
-          color:#333;
-          font-weight:600;
-          max-width:320px;
-          text-align:center;
-        ">
-          <li><strong>Poniedziałek:</strong> 13:00 – 20:00</li>
-          <li><strong>Wtorek:</strong> 8:30 – 15:30</li>
-          <li><strong>Środa:</strong> 13:00 – 20:00</li>
-          <li><strong>Czwartek:</strong> 8:30 – 15:30</li>
-          <li><strong>Piątek:</strong> 13:00 – 20:00</li>
-          <li style="opacity:0.7;"><strong>Sobota:</strong> nieczynne</li>
-          <li style="opacity:0.7;"><strong>Niedziela:</strong> nieczynne</li>
-        </ul>
+.description-card {
 
-        <!-- KARUZELA ZDJĘĆ -->
-        <div class="gallery-card" style="max-width:100%; margin:0 auto;">
-          <div class="slider" id="slider" style="position:relative; height:450px; overflow:hidden; border-radius:12px;">
-            <img class="slide active" src="gabinet.jpg" alt="Gabinet 1" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:1; transition:opacity .6s ease;">
-            <img class="slide" src="gabinet1.jpg" alt="Gabinet 2" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease;">
-            <img class="slide" src="gabinet2.jpg" alt="Gabinet 3" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease;">
-            <button class="slide-btn prev" aria-label="Poprzednie" style="position:absolute; left:8px; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center;">‹</button>
-            <button class="slide-btn next" aria-label="Następne" style="position:absolute; right:8px; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center;">›</button>
-          </div>
-          <div class="dots" style="display:flex; gap:8px; justify-content:center; margin-top:12px;">
-            <button class="dot active" data-index="0" aria-label="Slide 1" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:1; cursor:pointer;"></button>
-            <button class="dot" data-index="1" aria-label="Slide 2" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer;"></button>
-            <button class="dot" data-index="2" aria-label="Slide 3" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer;"></button>
-          </div>
-        </div>
+  border-radius: 20px;
+  padding: 30px;
+}
 
-        <!-- DODATKOWE INFORMACJE -->
-        <div style="
-          background: #eef3e0;
-          border-left:5px solid #9FBF3B;
-          padding:20px;
-          border-radius:14px;
-          box-shadow:0 4px 20px rgba(0,0,0,0.08);
-          margin-top: 20px;
-          width:100%;
-        ">
-          <h3 style="margin-bottom:8px; color:#9FBF3B; font-size:1.3rem;">Informacje dodatkowe</h3>
-          <p style="font-size:1rem; line-height:1.6; color:#666; text-align:center;">
-            • Rejestracja telefoniczna w godzinach pracy.<br>
-            • W nagłych przypadkach znajdziemy najszybszy możliwy termin.<br>
-            • Płatność kartą, BLIK lub gotówką.
-          </p>
-        </div>
+.equipment-list {
+  list-style: disc; /* kropki */
+  padding-left: 1.2em;
+  text-align: left;
+  color: #444;
+  line-height: 1.6;
+}
+
+.carousel-card {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+
+.slide.active { opacity: 1; }
+
+.slide-btn { position:absolute; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+
+.slide-btn.prev { left:10px; }
+.slide-btn.next { right:10px; }
+
+.dots { display:flex; gap:8px; justify-content:center; margin-top:12px; }
+.dots button { width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer; transition: opacity 0.3s; }
+.dots button.active { opacity:1; }
+</style>
+
+<script>
+(function(){
+  const slides = Array.from(document.querySelectorAll('#slider .slide'));
+  const dots = Array.from(document.querySelectorAll('.dot'));
+  const prevBtn = document.querySelector('.slide-btn.prev');
+  const nextBtn = document.querySelector('.slide-btn.next');
+  let current = 0;
+  let interval = setInterval(next, 4000);
+
+  function goTo(index){
+    slides.forEach((s,i)=>{ s.classList.toggle('active', i===index); });
+    dots.forEach((d,i)=>{ d.classList.toggle('active', i===index); });
+    current = index;
+  }
+  function next(){ goTo((current+1)%slides.length); }
+  function prev(){ goTo((current-1+slides.length)%slides.length); }
+
+  nextBtn.addEventListener('click', ()=>{ next(); resetInterval(); });
+  prevBtn.addEventListener('click', ()=>{ prev(); resetInterval(); });
+  dots.forEach(dot => dot.addEventListener('click', e => { goTo(Number(e.currentTarget.dataset.index)); resetInterval(); }));
+
+  function resetInterval(){
+    clearInterval(interval);
+    interval = setInterval(next, 4000);
+  }
+})();
+</script>
+
 
       </div>
     </div>

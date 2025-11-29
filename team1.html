@@ -209,73 +209,113 @@ header {
       gap:30px;
     ">
 
+<div class="content">
+  <div class="team-container">
 
-      <!-- GODZINY OTWARCIA -->
-      <div style="flex:1 1 420px;">
-        <h2 style="
-          font-size:2.3rem;
-          margin:0 0 20px;
-          color:#9FBF3B;
-          text-align:center;
-          font-weight:700;
-          letter-spacing:1px;
-        ">
-          Godziny otwarcia
-        </h2>
+    <div class="team-card">
+      <div class="team-image">
+        <img src="gab1.jpg" alt="Anna Nowak">
+      </div>
+      <h3>Anna Lenart</h3>
+      <p class="position">Lekarz stomatolog</p>
+      <p class="description">Specjalistka w stomatologii estetycznej i zachowawczej, z 10-letnim doświadczeniem. Pasjonuje się nowoczesnymi technikami odbudowy zębów.</p>
+    </div>
 
-        <ul style="
-          list-style:none;
-          padding:0;
-          margin:0 auto 20px auto;
-          font-size:1.25rem;
-          line-height:2;
-          color:#333;
-          font-weight:600;
-          max-width:320px;
-          text-align:center;
-        ">
-          <li><strong>Poniedziałek:</strong> 13:00 – 20:00</li>
-          <li><strong>Wtorek:</strong> 8:30 – 15:30</li>
-          <li><strong>Środa:</strong> 13:00 – 20:00</li>
-          <li><strong>Czwartek:</strong> 8:30 – 15:30</li>
-          <li><strong>Piątek:</strong> 13:00 – 20:00</li>
-          <li style="opacity:0.7;"><strong>Sobota:</strong> nieczynne</li>
-          <li style="opacity:0.7;"><strong>Niedziela:</strong> nieczynne</li>
-        </ul>
+    <div class="team-card">
+      <div class="team-image">
+        <img src="gabinet1.jpg" alt="Marek Kowalski">
+      </div>
+      <h3>Natalia Kubiszewska</h3>
+      <p class="position">Asystentka stomatologiczna</p>
+      <p class="description">Zawsze uśmiechnięty i pomocny. Dba o komfort pacjentów podczas zabiegów oraz wspiera lekarzy w codziennej pracy.</p>
+    </div>
 
-        <!-- KARUZELA ZDJĘĆ -->
-        <div class="gallery-card" style="max-width:100%; margin:0 auto;">
-          <div class="slider" id="slider" style="position:relative; height:450px; overflow:hidden; border-radius:12px;">
-            <img class="slide active" src="gabinet.jpg" alt="Gabinet 1" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:1; transition:opacity .6s ease;">
-            <img class="slide" src="gabinet1.jpg" alt="Gabinet 2" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease;">
-            <img class="slide" src="gabinet2.jpg" alt="Gabinet 3" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease;">
-            <button class="slide-btn prev" aria-label="Poprzednie" style="position:absolute; left:8px; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center;">‹</button>
-            <button class="slide-btn next" aria-label="Następne" style="position:absolute; right:8px; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center;">›</button>
-          </div>
-          <div class="dots" style="display:flex; gap:8px; justify-content:center; margin-top:12px;">
-            <button class="dot active" data-index="0" aria-label="Slide 1" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:1; cursor:pointer;"></button>
-            <button class="dot" data-index="1" aria-label="Slide 2" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer;"></button>
-            <button class="dot" data-index="2" aria-label="Slide 3" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer;"></button>
-          </div>
-        </div>
+  </div>
+</div>
 
-        <!-- DODATKOWE INFORMACJE -->
-        <div style="
-          background: #eef3e0;
-          border-left:5px solid #9FBF3B;
-          padding:20px;
-          border-radius:14px;
-          box-shadow:0 4px 20px rgba(0,0,0,0.08);
-          margin-top: 20px;
-          width:100%;
-        ">
-          <h3 style="margin-bottom:8px; color:#9FBF3B; font-size:1.3rem;">Informacje dodatkowe</h3>
-          <p style="font-size:1rem; line-height:1.6; color:#666; text-align:center;">
-            • Rejestracja telefoniczna w godzinach pracy.<br>
-            • W nagłych przypadkach znajdziemy najszybszy możliwy termin.<br>
-            • Płatność kartą, BLIK lub gotówką.
-          </p>
-        </div>
+<style>
+/*
+    <div class="team-card">
+      <div class="team-image">
+        <img src="gab1.jpg" alt="Ewa Wiśniewska">
+      </div>
+      <h3>Ewa Wiśniewska</h3>
+      <p class="position">Higienistka stomatologiczna</p>
+      <p class="description">Specjalistka w profilaktyce stomatologicznej i higienie jamy ustnej. Pasjonuje się edukacją pacjentów w zakresie zdrowia zębów.</p>
+    </div>
+*/
+
+.team-container {
+  display: flex;
+  flex-direction: column; /* jedna osoba na wiersz */
+  gap: 30px; /* odstęp między wierszami */
+  align-items: center; /* wyśrodkowanie kafelków */
+}
+
+.team-card {
+  /*background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);*/
+  border-radius: 16px;
+  padding: 30px;
+  width: 95%; /* prawie pełna szerokość kontenera */
+  max-width: 900px; /* opcjonalnie ograniczenie */
+  /*box-shadow: 0 8px 32px rgba(0,0,0,0.1);*/
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.team-image {
+  width: 400px; 
+  height: 450px; /* większe zdjęcia kwadratowe */
+  margin: 0 auto 20px auto;
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px; /* zaokrąglone rogi */
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.team-card h3 {
+  color: #9FBF3B;
+  margin-bottom: 5px;
+}
+
+.position {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .team-card {
+    width: 100%;
+    padding: 20px;
+  }
+  .team-image {
+    width: 200px;
+    height: 240px;
+  }
+}
+</style>
+
+
+
+
 
       </div>
     </div>

@@ -209,73 +209,81 @@ header {
       gap:30px;
     ">
 
+<div class="services-card">
+  <div class="services-content">
+    <h2>Zakres usług</h2>
+    <ul>
+      <li><strong>Stomatologia zachowawcza:</strong> leczenie ubytków, wypełnienia i profilaktyka próchnicy.</li>
+      <li><strong>Stomatologia estetyczna:</strong> wybielanie, licówki i poprawa wyglądu uśmiechu.</li>
+      <li><strong>Stomatologia dziecięca (pedodoncja):</strong> opieka nad zębami dzieci, fluoryzacja i wczesne leczenie.</li>
+      <li><strong>Protetyka stomatologiczna:</strong> korony, mosty, protezy stałe i ruchome.</li>
+      <li><strong>Profilaktyka:</strong> higienizacja, scaling, piaskowanie i instruktaż higieny jamy ustnej.</li>
+      <li><strong>Endodoncja (leczenie kanałowe):</strong> precyzyjne leczenie zębów objętych stanem zapalnym lub martwicą.</li>
+      <li><strong>Chirurgia:</strong> ekstrakcje zębów, zabiegi chirurgiczne i drobne operacje jamy ustnej.</li>
+      <li><strong>Periodontologia:</strong> leczenie chorób przyzębia, kontrola stanu dziąseł i profilaktyka paradontozy.</li>
+      <li><strong>Radiowizjografia (RTG zęba):</strong> szybka i bezpieczna diagnostyka obrazowa dla precyzyjnego leczenia.</li>
+      <li><strong>Ozonoterapia:</strong> wspomaganie leczenia próchnicy, infekcji i stanów zapalnych w jamie ustnej.</li>
+    </ul>
+  </div>
+  <div class="services-image">
+    <img src="gabinet1.jpg" alt="Usługi stomatologiczne">
+  </div>
+</div>
 
-      <!-- GODZINY OTWARCIA -->
-      <div style="flex:1 1 420px;">
-        <h2 style="
-          font-size:2.3rem;
-          margin:0 0 20px;
-          color:#9FBF3B;
-          text-align:center;
-          font-weight:700;
-          letter-spacing:1px;
-        ">
-          Godziny otwarcia
-        </h2>
+<style>
+.services-card {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  gap: 20px;
+  align-items: center;
+}
 
-        <ul style="
-          list-style:none;
-          padding:0;
-          margin:0 auto 20px auto;
-          font-size:1.25rem;
-          line-height:2;
-          color:#333;
-          font-weight:600;
-          max-width:320px;
-          text-align:center;
-        ">
-          <li><strong>Poniedziałek:</strong> 13:00 – 20:00</li>
-          <li><strong>Wtorek:</strong> 8:30 – 15:30</li>
-          <li><strong>Środa:</strong> 13:00 – 20:00</li>
-          <li><strong>Czwartek:</strong> 8:30 – 15:30</li>
-          <li><strong>Piątek:</strong> 13:00 – 20:00</li>
-          <li style="opacity:0.7;"><strong>Sobota:</strong> nieczynne</li>
-          <li style="opacity:0.7;"><strong>Niedziela:</strong> nieczynne</li>
-        </ul>
+.services-content {
+  flex: 1 1 300px;
+}
 
-        <!-- KARUZELA ZDJĘĆ -->
-        <div class="gallery-card" style="max-width:100%; margin:0 auto;">
-          <div class="slider" id="slider" style="position:relative; height:450px; overflow:hidden; border-radius:12px;">
-            <img class="slide active" src="gabinet.jpg" alt="Gabinet 1" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:1; transition:opacity .6s ease;">
-            <img class="slide" src="gabinet1.jpg" alt="Gabinet 2" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease;">
-            <img class="slide" src="gabinet2.jpg" alt="Gabinet 3" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease;">
-            <button class="slide-btn prev" aria-label="Poprzednie" style="position:absolute; left:8px; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center;">‹</button>
-            <button class="slide-btn next" aria-label="Następne" style="position:absolute; right:8px; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.4); border:none; color:white; width:36px; height:36px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center;">›</button>
-          </div>
-          <div class="dots" style="display:flex; gap:8px; justify-content:center; margin-top:12px;">
-            <button class="dot active" data-index="0" aria-label="Slide 1" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:1; cursor:pointer;"></button>
-            <button class="dot" data-index="1" aria-label="Slide 2" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer;"></button>
-            <button class="dot" data-index="2" aria-label="Slide 3" style="width:10px; height:10px; border-radius:50%; border:none; background:#9FBF3B; opacity:0.4; cursor:pointer;"></button>
-          </div>
-        </div>
+.services-content h2 {
+  color: #9FBF3B;
+  margin-bottom: 16px;
+  text-align: left;
+}
 
-        <!-- DODATKOWE INFORMACJE -->
-        <div style="
-          background: #eef3e0;
-          border-left:5px solid #9FBF3B;
-          padding:20px;
-          border-radius:14px;
-          box-shadow:0 4px 20px rgba(0,0,0,0.08);
-          margin-top: 20px;
-          width:100%;
-        ">
-          <h3 style="margin-bottom:8px; color:#9FBF3B; font-size:1.3rem;">Informacje dodatkowe</h3>
-          <p style="font-size:1rem; line-height:1.6; color:#666; text-align:center;">
-            • Rejestracja telefoniczna w godzinach pracy.<br>
-            • W nagłych przypadkach znajdziemy najszybszy możliwy termin.<br>
-            • Płatność kartą, BLIK lub gotówką.
-          </p>
-        </div>
+.services-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.services-content ul li {
+  margin-bottom: 12px;
+}
+
+.services-image {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.services-image img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .services-card {
+    flex-direction: column;
+  }
+  .services-image {
+    margin-top: 20px;
+  }
+}
+</style>
+
+
 
       </div>
     </div>
