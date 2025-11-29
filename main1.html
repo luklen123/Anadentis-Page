@@ -23,8 +23,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:3rem;
-    padding: 1rem 2rem;
+    gap: 0.5rem;
+    padding: 0.5rem 2rem;
     background: rgba(44,44,44,0.85);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -58,6 +58,7 @@
   /* Hamburger */
   .hamburger {
     display:none;
+        top: 98px;
     flex-direction:column;
     gap:5px;
     cursor:pointer;
@@ -92,6 +93,16 @@
       transition:right 0.3s ease;
     }
 
+    header {
+      flex-direction: column;
+    }
+
+    .top-nav {
+      flex-direction: row;
+    }
+
+
+
     nav ul.active { right:0; }
 
     .hamburger { display:flex; }
@@ -101,7 +112,7 @@
   .alert-bar {
     display:none; /* domyślnie ukryty */
     position: fixed;
-    top: 87px; /* zaraz pod headerem */
+    top: 98px; /* zaraz pod headerem */
     left: 0;
     width: 100%;
     background: #9FBF3B; /* pomarańczowo-zielony akcent */
@@ -115,7 +126,7 @@
 
   /* Sections */
   section {
-    margin-top:100px; 
+    margin-top: 110px; 
     padding:80px 20px;
     max-width:1000px;
     margin-left:auto;
@@ -123,7 +134,7 @@
     background: #fff; 
     border-radius:20px;
     box-shadow: 0 8px 32px 0 rgba(31,38,135,0.1);
-    margin-bottom:50px;
+    margin-bottom: 30px;
     color:#333;
   }
 
@@ -143,10 +154,11 @@
 <body>
 
 <header>
-  <div class="logo">
-    <img src="logo.png" alt="Logo">
-  </div>
-  <nav>
+  <div class="top-nav">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <nav>
     <ul id="menu">
       <li><a href="main.html">Strona główna</a></li>
       <li><a href="location.html">Dojazd</a></li>
@@ -160,7 +172,9 @@
       <div></div>
       <div></div>
     </div>
-  </nav>
+    </nav>
+  </div>
+  <div class="phone_info"><span style="color: white">Rejestracja telefoniczna:</span> <a href="tel:+48123456789" style="color: #9FBF3B"> +48 509 503 765</a></div>
 </header>
 
 <!-- Pasek alertu -->
@@ -303,6 +317,9 @@
   gap: 12px;
 }
 .cw-toggle {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -384,8 +401,8 @@ widget.addEventListener('click', e => e.stopPropagation());
 
 
 <footer style="
-  margin-top:60px;
-  padding:25px 10px;
+  margin-top:30px;
+  padding:10px;
   text-align:center;
   font-size:0.95rem;
   color:#333;
@@ -420,7 +437,7 @@ function showAlert(message) {
 // Przykład: wywołanie alertu po załadowaniu strony
 // Możesz podmienić warunek na np. sprawdzenie godzin otwarcia
 window.addEventListener('load', () => {
-  const isClosed = fasle; // ustaw na true jeśli gabinet zamknięty
+  const isClosed = false; // ustaw na true jeśli gabinet zamknięty
   if(isClosed){
     showAlert("Gabinet zamknięty w dniach 01.12.2025 - 23.11.2026. Za utrudnienia przepraszamy.");
   }
